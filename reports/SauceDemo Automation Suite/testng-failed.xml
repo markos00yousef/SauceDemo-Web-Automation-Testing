@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SauceDemo Automation Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="SauceDemo Test Cases(failed)" verbose="0">
+    <classes>
+      <class name="tests.CheckoutTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyLastNameWithSpecialCharactersTest"/>
+          <include name="verifyPostalCodeWithLettersTest"/>
+          <include name="verifyFirstNameWithNumbersTest"/>
+        </methods>
+      </class> <!-- tests.CheckoutTest -->
+      <class name="tests.CartTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyCheckoutWithEmptyCartTest"/>
+        </methods>
+      </class> <!-- tests.CartTest -->
+    </classes>
+  </test> <!-- SauceDemo Test Cases(failed) -->
+</suite> <!-- Failed suite [SauceDemo Automation Suite] -->

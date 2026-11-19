@@ -1,0 +1,15 @@
+
+# Maven generated files
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
