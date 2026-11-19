@@ -1,5 +1,5 @@
 
-name: SauceDemo Selenium Automation
+name: SauceDemo Selenium Automation Tests
 
 on:
   push:
