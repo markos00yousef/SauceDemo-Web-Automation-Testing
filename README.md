@@ -136,6 +136,69 @@ Open `TestNG-Report.html` in a browser to view the TestNG HTML report.
 
 A copy of the report is also maintained in the project's `reports/` directory.
 
+## CI/CD – GitHub Actions
+
+This project is integrated with **GitHub Actions** to automate test execution through a CI pipeline.
+
+### Workflow Triggers
+- Automatically runs on every push to the `master` branch.
+- Runs on pull requests targeting the `master` branch.
+- Supports manual execution through `workflow_dispatch`.
+
+### Execution Environment
+- Ubuntu Latest
+- Java 20
+- Maven
+- Selenium WebDriver
+- Chrome Headless Mode
+- TestNG
+
+### Pipeline Steps
+1. Checkout the repository.
+2. Set up Java 20 and Maven caching.
+3. Execute the TestNG suite using `mvn clean test`.
+4. Upload test reports, execution logs, and failure screenshots as GitHub Actions artifacts.
+
+### Execution Results
+The CI pipeline successfully executes the automated test suite. The four known test failures are related to documented application defects and are tracked in the project's bug reports.
+## Allure Test Reporting
+
+The project integrates **Allure Reports** with TestNG to provide interactive and detailed test execution reports.
+
+### Report Features
+- Test execution statistics (Passed, Failed, and Skipped).
+- Test suite organization.
+- Detailed test case execution results.
+- Failure descriptions and stack traces.
+- Test execution overview and visual summaries.
+
+### Report Screenshots
+
+**Overview Dashboard**
+
+![Allure Overview](screenshots/allure-report/Allure Report.png)
+
+### Generate Allure Report Locally
+
+Run the following commands:
+
+```bash
+mvn clean test
+mvn allure:serve
+```
+
+### GitHub Actions Integration
+
+Allure reporting is integrated into the GitHub Actions CI pipeline.
+
+- Allure HTML reports are generated after test execution.
+- Reports are uploaded as GitHub Actions artifacts.
+- Reports remain available even when test cases fail.
+- Test execution results can be downloaded from the workflow run.
+
+**Artifact Name:** `allure-html-report`
+
+**Workflow File:** `.github/workflows/selenium-tests.yml`
 
 ## 🐞 Bug Reports & Defect Documentation
 

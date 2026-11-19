@@ -28,6 +28,20 @@ jobs:
       - name: Run Selenium TestNG Suite
         run: mvn -B clean test
 
+      - name: Generate Allure HTML Report
+        if: always()
+        run: mvn -B allure:report
+
+      - name: Upload Allure Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-html-report
+          path: |
+            target/site/allure-maven-plugin/
+            target/allure-results/
+          if-no-files-found: warn
+
       - name: Upload TestNG Reports and Test Results
         if: always()
         uses: actions/upload-artifact@v4

@@ -13,3 +13,9 @@ target/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Allure CLI
+/.allure/
+
+# Maven generated files
+/target/
