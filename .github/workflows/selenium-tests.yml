@@ -1,0 +1,49 @@
+
+name: SauceDemo Selenium Automation
+
+on:
+  push:
+    branches: [ "master" ]
+
+  pull_request:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+jobs:
+  selenium-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 20
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '20'
+          cache: maven
+
+      - name: Run Selenium TestNG Suite
+        run: mvn -B clean test
+
+      - name: Upload TestNG Reports and Test Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: selenium-test-reports
+          path: |
+            target/surefire-reports/
+            reports/
+          if-no-files-found: warn
+
+      - name: Upload Failure Screenshots and Logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: selenium-failure-evidence
+          path: |
+            screenshots/failed/
+            logs/
+          if-no-files-found: warn
