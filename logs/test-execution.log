@@ -1,0 +1,78 @@
+2026-11-19 21:14:27 INFO  TestListener - TEST STARTED: verifyCancelCheckout
+2026-11-19 21:14:28 INFO  TestListener - TEST PASSED: verifyCancelCheckout
+2026-11-19 21:14:31 INFO  TestListener - TEST STARTED: verifyCheckoutOverviewSummaryTest
+2026-11-19 21:14:32 INFO  TestListener - TEST PASSED: verifyCheckoutOverviewSummaryTest
+2026-11-19 21:27:18 INFO  TestListener - =================================
+2026-11-19 21:27:18 INFO  TestListener - TEST STARTED: verifyCancelCheckout
+2026-11-19 21:27:18 INFO  TestListener - =================================
+2026-11-19 21:27:18 INFO  TestListener - =================================
+2026-11-19 21:27:18 INFO  TestListener - TEST PASSED: verifyCancelCheckout
+2026-11-19 21:27:18 INFO  TestListener - =================================
+2026-11-19 21:27:29 INFO  TestListener - =================================
+2026-11-19 21:27:29 INFO  TestListener - TEST STARTED: verifyCheckoutOverviewSummaryTest
+2026-11-19 21:27:29 INFO  TestListener - =================================
+2026-11-19 21:27:30 INFO  TestListener - =================================
+2026-11-19 21:27:30 INFO  TestListener - TEST PASSED: verifyCheckoutOverviewSummaryTest
+2026-11-19 21:27:30 INFO  TestListener - =================================
+2026-11-19 21:27:37 INFO  TestListener - =================================
+2026-11-19 21:27:37 INFO  TestListener - TEST STARTED: verifyCheckoutWithCustomerInformationEmptyFirstNameTest
+2026-11-19 21:27:37 INFO  TestListener - =================================
+2026-11-19 21:27:38 INFO  TestListener - =================================
+2026-11-19 21:27:38 INFO  TestListener - TEST PASSED: verifyCheckoutWithCustomerInformationEmptyFirstNameTest
+2026-11-19 21:27:38 INFO  TestListener - =================================
+2026-11-19 21:28:18 INFO  TestListener - =================================
+2026-11-19 21:28:18 INFO  TestListener - TEST STARTED: verifyCheckoutWithCustomerInformationEmptyLastNameTest
+2026-11-19 21:28:18 INFO  TestListener - =================================
+2026-11-19 21:28:19 INFO  TestListener - =================================
+2026-11-19 21:28:19 INFO  TestListener - TEST PASSED: verifyCheckoutWithCustomerInformationEmptyLastNameTest
+2026-11-19 21:28:19 INFO  TestListener - =================================
+2026-11-19 21:28:29 INFO  TestListener - =================================
+2026-11-19 21:28:29 INFO  TestListener - TEST STARTED: verifyCheckoutWithCustomerInformationEmptyPostalCodeTest
+2026-11-19 21:28:29 INFO  TestListener - =================================
+2026-11-19 21:28:29 INFO  TestListener - =================================
+2026-11-19 21:28:29 INFO  TestListener - TEST PASSED: verifyCheckoutWithCustomerInformationEmptyPostalCodeTest
+2026-11-19 21:28:29 INFO  TestListener - =================================
+2026-11-19 21:28:35 INFO  TestListener - =================================
+2026-11-19 21:28:35 INFO  TestListener - TEST STARTED: verifyCheckoutWithCustomerInformationEmptyTest
+2026-11-19 21:28:35 INFO  TestListener - =================================
+2026-11-19 21:28:36 INFO  TestListener - =================================
+2026-11-19 21:28:36 INFO  TestListener - TEST PASSED: verifyCheckoutWithCustomerInformationEmptyTest
+2026-11-19 21:28:36 INFO  TestListener - =================================
+2026-11-19 21:28:48 INFO  TestListener - =================================
+2026-11-19 21:28:48 INFO  TestListener - TEST STARTED: verifyCheckoutWithValidCustomerInformationTest
+2026-11-19 21:28:48 INFO  TestListener - =================================
+2026-11-19 21:28:48 INFO  TestListener - =================================
+2026-11-19 21:28:48 INFO  TestListener - TEST PASSED: verifyCheckoutWithValidCustomerInformationTest
+2026-11-19 21:28:48 INFO  TestListener - =================================
+2026-11-19 21:29:00 INFO  TestListener - =================================
+2026-11-19 21:29:00 INFO  TestListener - TEST STARTED: verifyFirstNameWithNumbersTest
+2026-11-19 21:29:00 INFO  TestListener - =================================
+2026-11-19 21:29:00 ERROR TestListener - =================================
+2026-11-19 21:29:00 ERROR TestListener - TEST FAILED: verifyFirstNameWithNumbersTest
+2026-11-19 21:29:00 ERROR TestListener - Failure Reason: java.lang.AssertionError: System should reject First Name containing numbers. expected [true] but found [false]
+2026-11-19 21:29:00 INFO  TestListener - Screenshot saved: screenshots\failed\verifyFirstNameWithNumbersTest.png
+2026-11-19 21:29:00 ERROR TestListener - =================================
+2026-11-19 21:29:08 INFO  TestListener - =================================
+2026-11-19 21:29:08 INFO  TestListener - TEST STARTED: verifyLastNameWithSpecialCharactersTest
+2026-11-19 21:29:08 INFO  TestListener - =================================
+2026-11-19 21:29:09 ERROR TestListener - =================================
+2026-11-19 21:29:09 ERROR TestListener - TEST FAILED: verifyLastNameWithSpecialCharactersTest
+2026-11-19 21:29:09 ERROR TestListener - Failure Reason: java.lang.AssertionError: System should reject Last Name containing special characters. expected [true] but found [false]
+2026-11-19 21:29:09 INFO  TestListener - Screenshot saved: screenshots\failed\verifyLastNameWithSpecialCharactersTest.png
+2026-11-19 21:29:09 ERROR TestListener - =================================
+2026-11-19 21:29:19 INFO  TestListener - =================================
+2026-11-19 21:29:19 INFO  TestListener - TEST STARTED: verifyPostalCodeWithLettersTest
+2026-11-19 21:29:19 INFO  TestListener - =================================
+2026-11-19 21:29:20 ERROR TestListener - =================================
+2026-11-19 21:29:20 ERROR TestListener - TEST FAILED: verifyPostalCodeWithLettersTest
+2026-11-19 21:29:20 ERROR TestListener - Failure Reason: java.lang.AssertionError: System should reject Postal Code containing letters. expected [true] but found [false]
+2026-11-19 21:29:20 INFO  TestListener - Screenshot saved: screenshots\failed\verifyPostalCodeWithLettersTest.png
+2026-11-19 21:29:20 ERROR TestListener - =================================
+2026-11-19 22:16:26 INFO  TestListener - ================================================================================================
+2026-11-19 22:16:26 INFO  TestListener - TEST STARTED: verifyCheckoutWithEmptyCartTest
+2026-11-19 22:16:26 INFO  TestListener - ================================================================================================
+2026-11-19 22:16:27 ERROR TestListener - ================================================================================================
+2026-11-19 22:16:27 ERROR TestListener - TEST FAILED: verifyCheckoutWithEmptyCartTest
+2026-11-19 22:16:27 ERROR TestListener - Failure Reason: java.lang.AssertionError: Checkout should not proceed when Cart is empty. expected [true] but found [false]
+2026-11-19 22:16:27 INFO  TestListener - Screenshot saved: screenshots\failed\verifyCheckoutWithEmptyCartTest.png
+2026-11-19 22:16:27 ERROR TestListener - ================================================================================================

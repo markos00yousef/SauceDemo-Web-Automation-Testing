@@ -83,6 +83,7 @@ The project includes 28 automated test methods covering the following features:
 - Last name containing special characters
 - Postal code containing letters
 
+
 ## Framework Design
 
 The project follows the **Page Object Model (POM)** design pattern.
@@ -90,7 +91,10 @@ The project follows the **Page Object Model (POM)** design pattern.
 - **BaseTest:** Handles WebDriver setup and teardown.
 - **Pages:** Contains page locators and reusable page actions.
 - **Tests:** Contains test methods and assertions.
-- **TestNG:** Manages test execution and test results.
+- **TestNG:** Manages test execution, assertions, and test lifecycle.
+- **TestNG Listeners:** Tracks test execution status (Passed, Failed, and Skipped).
+- **Screenshot:** on Failure: Automatically captures screenshots when a test fails.
+- **Log4j2:** Records test execution events, failure reasons, and screenshot paths.
 - **Maven:** Manages project dependencies and test execution.
 
 ## Test Execution
@@ -100,6 +104,10 @@ The project follows the **Page Object Model (POM)** design pattern.
 | Passed | 24 |
 | Failed | 4 |
 | Skipped | 0 |
+## Execution Monitoring & Reporting
+- **TestNG HTML Report:**  Provides a detailed summary of test execution results.
+- **Execution Logs:** Stores execution details in logs/test-execution.log.
+- **Failure Screenshots:** Automatically saves screenshots in screenshots/failed/ for debugging and evidence purposes.
 ### Prerequisites
 - Java JDK 20
 - Maven
@@ -121,23 +129,31 @@ The TestNG suite is configured through `testng.xml`.
 Test execution reports are generated under:
 
 ```text
-target/surefire-reports/
+SauceDemoAutomation/reports/
 ```
 
-Open `index.html` in a browser to view the TestNG HTML report.
+Open `TestNG-Report.html` in a browser to view the TestNG HTML report.
 
 A copy of the report is also maintained in the project's `reports/` directory.
 
-## Bugs Identified
 
-During manual and automated testing, the following application issues were identified:
+## 🐞 Bug Reports & Defect Documentation
 
-| Test Case | Description |
-|---|---|
-| TC-19 | Checkout can proceed with an empty shopping cart. |
-| TC-35 | First name field accepts numeric characters. |
-| TC-36 | Last name field accepts special characters. |
-| TC-37 | Postal code field accepts alphabetic characters. |
+During testing, 4 defects were identified and documented with reproduction steps, expected results, actual results, and screenshot evidence.
+
+| Bug ID | Description | Test Case | Severity |
+|---|---|---|---|
+| BUG-001 | Checkout allowed with empty cart | TC-19 | Major |
+| BUG-002 | First Name accepts numeric values | TC-35 | Medium |
+| BUG-003 | Last Name accepts special characters | TC-36 | Medium |
+| BUG-004 | Postal Code accepts alphabetic characters | TC-37 | Medium |
+
+### Bug Report Details
+
+- [BUG-001: Empty Cart Checkout](bug-reports/BUG-001-Empty-Cart-Checkout.md)
+- [BUG-002: First Name Accepts Numbers](bug-reports/BUG-002-First-Name-Numbers.md)
+- [BUG-003: Last Name Accepts Special Characters](bug-reports/BUG-003-Last-Name-Special-Characters.md)
+- [BUG-004: Postal Code Accepts Letters](bug-reports/BUG-004-Postal-Code-Letters.md)
 
 These findings highlight validation and business-logic issues identified during testing.
 
