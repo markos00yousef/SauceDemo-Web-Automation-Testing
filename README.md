@@ -176,7 +176,7 @@ The project integrates **Allure Reports** with TestNG to provide interactive and
 
 **Overview Dashboard**
 
-![Allure Overview](screenshots/allure-report/Allure Report.png)
+[Allure Overview](screenshots/allure-report/Allure Report.png)
 
 ### Generate Allure Report Locally
 
